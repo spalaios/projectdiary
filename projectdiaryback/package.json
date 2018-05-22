@@ -4,11 +4,12 @@
   "description": "a project record diary",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon server.js"
+    "test": "nodemon server.js --config nodemon.json"
   },
   "author": "Suraj Palai",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",

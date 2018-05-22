@@ -22,15 +22,14 @@ $(document).ready(function() {
 
         //ajax call to the url
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: '/home/data',
             data: data,
-            success: function(){
-                console.log('data send successfully');
+            success: function(response){
+                console.log(response);
             },
             error : function(error){
-                console.log('failed');
-                console.log(error);
+                console.log(error.responseText);
             }
           });
 

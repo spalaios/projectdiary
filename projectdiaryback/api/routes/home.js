@@ -18,7 +18,23 @@ router.get('/', (req, res, next) => {
 router.post('/data', (req, res, next) => {
     console.log(req.body);
     // res.send('data received');
-    res.status(500).send('suraj said something went wrong..');
+    const form = new Form({
+        name : req.body.name,
+        description : req.body.description,
+        technologies : req.body.technologies,
+        concepts : req.body.concepts
+    });
+
+    form.save()
+        .then((result) => {
+            console.log(result);
+            return res.status(201).send('Data successfully saved to databse');
+            
+        }).catch((err) => {
+            return res.status(500).send({
+                error : err
+            });
+        });
 });
 
 module.exports = router;
