@@ -1,0 +1,12 @@
+.form-container {
+    margin-top: 50px;
+}
+
+#name, #technologies  {
+    border: none;
+    border-bottom: 1px solid blue;
+}
+
+.page-title {
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "project-diary",
+  "version": "1.0.0",
+  "description": "a project record diary",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "author": "Suraj Palai",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.4"
+  }
+}

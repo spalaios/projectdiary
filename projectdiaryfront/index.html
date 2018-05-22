@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<body>
+    <div class="container form-container">
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <h3 class="page-title">Project Detail Form</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 offset-md-2 col-md-8">
+                <div class="project_data_entry_form">
+                    <form action="/data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="projectname" aria-describedby="emailHelp" placeholder="Project Name.." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="projectdescription" class="form-control" id="description" cols="30" rows="5" placeholder="Enter your description here.." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="technologies">Technologies Used</label>
+                            <input type="text" class="form-control" id="technologies" name="projecttechnologies" aria-describedby="emailHelp" placeholder="eg: Nodejs,express.js,..">
+                        </div>
+                        <div class="form-group">
+                            <label for="concepts">Concepts Learned</label>
+                            <textarea name="projectconcepts" class="form-control" id="concepts" cols="30" rows="5" placeholder="Enter the concepts learned here.."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>   
+</body>
+</html>
