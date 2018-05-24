@@ -6,6 +6,8 @@ const path = require('path');
 const formRouter = require('./api/routes/home');
 const userRouter = require('./api/routes/users');
 const loginRouter = require('./api/routes/login');
+const welcomeRouter = require('./api/routes/welcome');
+const checkAuth = require('./api/authorization/checkAuth.js');
 const app = express();
 
 //set the mongoose promise as globals promise
@@ -27,11 +29,11 @@ app.use(bodyParser.urlencoded({extended : false}));
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/signup', express.static(path.join(__dirname, 'public/signup.html')));
 app.use('/login', express.static(path.join(__dirname, 'public/login.html')));
-app.use('/welcome', express.static(path.join(__dirname, 'public/welcome.html')));
+// app.use('/welcome', express.static(path.join(__dirname, 'public/welcome.html')));
 app.use('/home', formRouter);
 app.use('/signup', userRouter);
 app.use('/login', loginRouter);
-
+app.use('/welcome', welcomeRouter);
 
 //error handling for wrong routes
 

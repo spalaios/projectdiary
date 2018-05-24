@@ -43,7 +43,8 @@ router.post('/data', (req, res, next) => {
                         );
                         return res.status(200).send({
                             message : 'success',
-                            token : token
+                            token : token,
+                            url : 'welcome'
                         });
                     //    return res.redirect('/welcome');
                         // return res.status(200);
